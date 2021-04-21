@@ -1,0 +1,35 @@
+﻿<Window x:Class="GeneticAlgorithmPCB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeneticAlgorithmPCB"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Click="btnDrawOne"  Content="Draw first" HorizontalAlignment="Left" Margin="550,22,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Click="btnDrawTwo" Content="Draw second" HorizontalAlignment="Left" Margin="550,46,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Click="btnDrawThree" Content="Draw third" HorizontalAlignment="Left" Margin="550,70,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Click="btnDrawFour" Content="Draw fourth" HorizontalAlignment="Left" Margin="550,94,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Click ="btnSolveGA_Click" Content="Solve by GA" HorizontalAlignment="Left" Margin="16,285,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.442,-1.912"/>
+        <Button Click ="btnSolveNONGA_Click" Content="Solve by Random" HorizontalAlignment="Left" Margin="93,285,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txt" Text="Status..." HorizontalAlignment="Left" Margin="16,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+        <TextBlock x:Name="txt1" Text="Status..." HorizontalAlignment="Left" Margin="115,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="result" HorizontalAlignment="Left" Margin="224,287,0,0" Text="RANDOM Results..." TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Height="18"/>
+        <TextBox x:Name="result1" HorizontalAlignment="Left" Margin="224,318,0,0" Text="GA Results..." TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Height="18"/>
+        <Label Content="PopulationSize" HorizontalAlignment="Left" Margin="550,151,0,0" VerticalAlignment="Top" Width="89"/>
+        <TextBox x:Name="pop" HorizontalAlignment="Left" Margin="644,159,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Iterations" HorizontalAlignment="Left" Margin="550,183,0,0" VerticalAlignment="Top" Width="89"/>
+        <TextBox x:Name="num" HorizontalAlignment="Left" Margin="644,187,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Crossover" HorizontalAlignment="Left" Margin="550,209,0,0" VerticalAlignment="Top" Width="89"/>
+        <TextBox x:Name="cros" HorizontalAlignment="Left" Margin="644,213,0,0" Text="0.5" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Mutation" HorizontalAlignment="Left" Margin="550,235,0,0" VerticalAlignment="Top" Width="89"/>
+        <TextBox x:Name="mut" HorizontalAlignment="Left" Margin="644,240,0,0" Text="0.5" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <TextBox HorizontalScrollBarVisibility="Visible"
+         VerticalScrollBarVisibility="Visible" TextWrapping="WrapWithOverflow" x:Name="best" HorizontalAlignment="Left" Text="BestSolution" VerticalAlignment="Top" Height="258" Width="496"/>
+        <Label Content="Tournament" HorizontalAlignment="Left" Margin="550,263,0,0" VerticalAlignment="Top" Width="89"/>
+        <TextBox x:Name="tour" HorizontalAlignment="Left" Margin="644,271,0,0" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
